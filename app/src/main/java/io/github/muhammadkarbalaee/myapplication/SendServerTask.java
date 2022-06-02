@@ -18,7 +18,7 @@ public class SendServerTask extends AsyncTask<Void,Void,Void> {
   @Override
   protected Void doInBackground(Void... voids) {
     try {
-      Socket socket = new Socket("172.20.172.215", 5000);
+      Socket socket = new Socket("172.20.97.180", 5000);
       DataOutputStream dataOutputStream = new DataOutputStream(socket.getOutputStream());
       dataOutputStream.writeUTF(messages.size() + "");
       for (String message : messages) {
